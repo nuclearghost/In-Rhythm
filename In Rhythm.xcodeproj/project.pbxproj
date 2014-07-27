@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8BF6C4EF0CDE42AB9D903DFB /* libPods-In Rhythm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 333575744D3944C09E8FA031 /* libPods-In Rhythm.a */; };
 		F352228819847CB6001A1C3F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F352228719847CB6001A1C3F /* StartViewController.m */; };
+		F352228B1984A6C8001A1C3F /* TrackListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F352228A1984A6C8001A1C3F /* TrackListTableViewController.m */; };
 		F369F3A4198473B0001FFFC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A3198473B0001FFFC5 /* Foundation.framework */; };
 		F369F3A6198473B0001FFFC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A5198473B0001FFFC5 /* CoreGraphics.framework */; };
 		F369F3A8198473B0001FFFC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A7198473B0001FFFC5 /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 		333575744D3944C09E8FA031 /* libPods-In Rhythm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-In Rhythm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F352228619847CB5001A1C3F /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		F352228719847CB6001A1C3F /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		F35222891984A6C8001A1C3F /* TrackListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackListTableViewController.h; sourceTree = "<group>"; };
+		F352228A1984A6C8001A1C3F /* TrackListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackListTableViewController.m; sourceTree = "<group>"; };
 		F369F3A0198473B0001FFFC5 /* In Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "In Rhythm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F369F3A3198473B0001FFFC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F369F3A5198473B0001FFFC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +162,8 @@
 				F369F3B7198473B0001FFFC5 /* Main.storyboard */,
 				F352228619847CB5001A1C3F /* StartViewController.h */,
 				F352228719847CB6001A1C3F /* StartViewController.m */,
+				F35222891984A6C8001A1C3F /* TrackListTableViewController.h */,
+				F352228A1984A6C8001A1C3F /* TrackListTableViewController.m */,
 				F369F3BA198473B0001FFFC5 /* ViewController.h */,
 				F369F3BB198473B0001FFFC5 /* ViewController.m */,
 				F369F3BD198473B0001FFFC5 /* MyScene.h */,
@@ -335,6 +340,7 @@
 				F369F3BF198473B0001FFFC5 /* MyScene.m in Sources */,
 				F369F3BC198473B0001FFFC5 /* ViewController.m in Sources */,
 				F352228819847CB6001A1C3F /* StartViewController.m in Sources */,
+				F352228B1984A6C8001A1C3F /* TrackListTableViewController.m in Sources */,
 				F369F3B6198473B0001FFFC5 /* AppDelegate.m in Sources */,
 				F369F3B2198473B0001FFFC5 /* main.m in Sources */,
 			);

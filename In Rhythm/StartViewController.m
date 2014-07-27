@@ -36,15 +36,7 @@
                                              error:&jsonError];
         if (!jsonError && [jsonResponse isKindOfClass:[NSArray class]]) {
             NSLog(@"%@", jsonResponse);
-            /*
-            SCTTrackListViewController *trackListVC;
-            trackListVC = [[SCTTrackListViewController alloc]
-                           initWithNibName:@"SCTTrackListViewController"
-                           bundle:nil];
-            trackListVC.tracks = (NSArray *)jsonResponse;
-            [self presentViewController:trackListVC
-                               animated:YES completion:nil];
-             */
+            [self performSegueWithIdentifier:@"listSegue" sender:jsonResponse];
         }
     };
     
@@ -78,5 +70,16 @@
         [self presentViewController:loginViewController animated:YES completion:nil];
     }];
 
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Make sure your segue name in storyboard is the same as this line
+    if ([[segue identifier] isEqualToString:@"listSegue"])
+    {
+        TrackListTableViewController *tlvc = [segue destinationViewController];
+        
+        tlvc.tracks = sender;
+    }
 }
 @end

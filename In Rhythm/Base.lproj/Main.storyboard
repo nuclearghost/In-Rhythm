@@ -4,6 +4,51 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Track List Table View Controller-->
+        <scene sceneID="OJr-F5-6ci">
+            <objects>
+                <tableViewController id="Rbi-7z-FOI" customClass="TrackListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8hG-K4-q9X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="8jf-zT-6ec" detailTextLabel="ckS-6S-O9Z" style="IBUITableViewCellStyleSubtitle" id="fLY-rv-kQZ">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fLY-rv-kQZ" id="rPL-Fe-vah">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8jf-zT-6ec">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ckS-6S-O9Z">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rbi-7z-FOI" id="w0H-tt-1It"/>
+                            <outlet property="delegate" destination="Rbi-7z-FOI" id="t66-Qb-utf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="AiO-45-mod"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLh-UZ-sxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="213" y="764"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
@@ -77,6 +122,7 @@
                     </view>
                     <connections>
                         <segue destination="LVB-YS-i5n" kind="push" identifier="gameSegue" id="xIK-4b-Dnp"/>
+                        <segue destination="Rbi-7z-FOI" kind="modal" identifier="listSegue" modalTransitionStyle="flipHorizontal" id="eCZ-yS-vxy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqa-M0-eGk" userLabel="First Responder" sceneMemberID="firstResponder"/>

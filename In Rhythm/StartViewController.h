@@ -10,6 +10,8 @@
 
 #import "SCUI.h"
 
+#import "TrackListTableViewController.h"
+
 @interface StartViewController : UIViewController
 - (IBAction)startBtnTapped:(id)sender;
 - (IBAction)searchBtnTapped:(id)sender;
