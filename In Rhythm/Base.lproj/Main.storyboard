@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="QmQ-BF-dW3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hND-aw-BU5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="8jf-zT-6ec" detailTextLabel="ckS-6S-O9Z" style="IBUITableViewCellStyleSubtitle" id="fLY-rv-kQZ">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fLY-rv-kQZ" id="rPL-Fe-vah">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -120,14 +120,30 @@
                             <constraint firstAttribute="centerY" secondItem="nvw-aK-pdc" secondAttribute="centerY" id="yDo-sC-QV7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="L9W-TV-TVF"/>
                     <connections>
                         <segue destination="LVB-YS-i5n" kind="push" identifier="gameSegue" id="xIK-4b-Dnp"/>
-                        <segue destination="Rbi-7z-FOI" kind="modal" identifier="listSegue" modalTransitionStyle="flipHorizontal" id="eCZ-yS-vxy"/>
+                        <segue destination="Rbi-7z-FOI" kind="push" identifier="listSegue" id="eCZ-yS-vxy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqa-M0-eGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-353" y="74"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XXC-pr-0Ux">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="hND-aw-BU5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0fX-cU-xi6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QmQ-BF-dW3" kind="relationship" relationship="rootViewController" id="fWP-YQ-dto"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0w-mI-Zm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-747" y="74"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
