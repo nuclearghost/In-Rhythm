@@ -40,13 +40,6 @@
     NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
     cell.textLabel.text = [track objectForKey:@"title"];
     cell.detailTextLabel.text = [[track objectForKey:@"user"] objectForKey:@"username"];
-    NSString *url = [track objectForKey:@"artwork_url"];
-    if (![url isEqual:[NSNull null]]) {
-        NSLog(@"Url: %@",url);
-        cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
-    } else {
-        cell.imageView.image = nil;
-    }
     
     return cell;
 }
@@ -69,6 +62,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                  self.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
                  [self.player prepareToPlay];
                  [self.player play];
+                 //NSLog(@"%@", [self.player.settings allKeys]);
+                 NSLog(@"Channel Layout: %@", [self.player.settings objectForKey:AVChannelLayoutKey]);
+                 NSLog(@"Bit rate: %@", [self.player.settings objectForKey:AVEncoderBitRateKey]);
+                 NSLog(@"Format: %@", [self.player.settings objectForKey:AVFormatIDKey]);
+                 NSLog(@"Sample Rate: %@", [self.player.settings objectForKey:AVSampleRateKey]);
              }];
 }
 @end
