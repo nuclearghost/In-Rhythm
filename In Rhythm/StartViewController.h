@@ -12,7 +12,7 @@
 
 #import "TrackListTableViewController.h"
 
-@interface StartViewController : UIViewController
+@interface StartViewController : UIViewController <UIAlertViewDelegate>
 - (IBAction)startBtnTapped:(id)sender;
 - (IBAction)searchBtnTapped:(id)sender;
 - (IBAction)loginBtnTapped:(id)sender;

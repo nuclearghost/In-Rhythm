@@ -27,6 +27,24 @@
         return;
     }
     
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"SoundCloud Search"
+                          message:@"Enter Search Term"
+                          delegate:self
+                          cancelButtonTitle:@"Cancel"
+                          otherButtonTitles:@"OK", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    UITextField *textField =  [alertView textFieldAtIndex:0];
+    [self submitSearch:textField.text];
+}
+
+- (void)submitSearch:(NSString *)query {
+    SCAccount *account = [SCSoundCloud account];
     SCRequestResponseHandler handler;
     handler = ^(NSURLResponse *response, NSData *data, NSError *error) {
         NSError *jsonError = nil;
@@ -40,7 +58,8 @@
         }
     };
     
-    NSString *resourceURL = @"https://api.soundcloud.com/tracks.json?q=krewella&filter=streamable&order=hotness";
+    NSString *resourceURL = [[NSString stringWithFormat:@"https://api.soundcloud.com/tracks.json?q=%@&filter=streamable&order=hotness", query] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(@"%@", resourceURL);
     //@"https://api.soundcloud.com/me/tracks.json";
     [SCRequest performMethod:SCRequestMethodGET
                   onResource:[NSURL URLWithString:resourceURL]
