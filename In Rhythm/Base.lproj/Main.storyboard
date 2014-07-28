@@ -83,17 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvw-aK-pdc">
-                                <rect key="frame" x="121" y="269" width="79" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Game">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startBtnTapped:" destination="QmQ-BF-dW3" eventType="touchUpInside" id="9CC-Rk-Irl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-dg-31s">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-dg-31s">
                                 <rect key="frame" x="141" y="231" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login">
@@ -104,7 +94,7 @@
                                     <action selector="searchBtnTapped:" destination="QmQ-BF-dW3" eventType="touchUpInside" id="1RE-UA-FCs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKw-bH-3uy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKw-bH-3uy">
                                 <rect key="frame" x="136" y="307" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search">
@@ -117,10 +107,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="nvw-aK-pdc" secondAttribute="centerX" id="6O6-1T-vuS"/>
-                            <constraint firstItem="nvw-aK-pdc" firstAttribute="top" secondItem="Qaa-dg-31s" secondAttribute="bottom" constant="20" id="oJP-xg-aQy"/>
+                            <constraint firstItem="Qaa-dg-31s" firstAttribute="top" secondItem="SER-CO-33q" secondAttribute="bottom" constant="187" id="Gy0-yx-BS6"/>
+                            <constraint firstItem="Qaa-dg-31s" firstAttribute="centerX" secondItem="zKw-bH-3uy" secondAttribute="centerX" id="OHX-Xc-Tqn"/>
+                            <constraint firstItem="zKw-bH-3uy" firstAttribute="top" secondItem="Qaa-dg-31s" secondAttribute="bottom" constant="46" id="RtA-Yn-Nta"/>
                             <constraint firstAttribute="centerX" secondItem="Qaa-dg-31s" secondAttribute="centerX" id="vvL-Z2-UjM"/>
-                            <constraint firstAttribute="centerY" secondItem="nvw-aK-pdc" secondAttribute="centerY" id="yDo-sC-QV7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L9W-TV-TVF"/>

@@ -11,6 +11,9 @@
 
 @implementation MyScene {
     MeterTable meterTable;
+    NSMutableArray *emitterArray;
+    int birthRate;
+    int emitterInsertPos;
 }
 
 -(id)initWithSize:(CGSize)size {
@@ -27,6 +30,10 @@
                                        CGRectGetMidY(self.frame));
         
         [self addChild:myLabel];
+        
+        self->birthRate = 100;
+        self->emitterInsertPos = 0;
+        self->emitterArray = [[NSMutableArray alloc] initWithCapacity:5];
     }
     return self;
 }
@@ -37,22 +44,30 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    /*
-     for (UITouch *touch in touches) {
-     CGPoint location = [touch locationInNode:self];
-     
-     SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-     
-     sprite.position = location;
-     
-     SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-     
-     [sprite runAction:[SKAction repeatActionForever:action]];
-     
-     [self addChild:sprite];
-     }
-     */
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+        //add effect at touch location
+        if ([self->emitterArray count] == 5) {
+            SKEmitterNode *toRemove = self->emitterArray[self->emitterInsertPos];
+            [toRemove removeFromParent];
+            [self->emitterArray removeObjectAtIndex:self->emitterInsertPos];
+        }
+        SKEmitterNode *newEmitter = [self newExplosion:location.x : location.y];
+        [self addChild: newEmitter];
+        [self->emitterArray insertObject:newEmitter atIndex:self->emitterInsertPos];
+        self->emitterInsertPos = (self->emitterInsertPos + 1) % 5;
+        self->birthRate = self->birthRate / [self->emitterArray count];
+    }
+}
+
+- (SKEmitterNode *) newExplosion: (float)posX : (float) posy
+{
+    SKEmitterNode *emitter =  [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"SparkParticle" ofType:@"sks"]];
+    emitter.position = CGPointMake(posX,posy);
+    //emitter.name = @"explosion";
+    //emitter.targetNode = self.scene;
+    //emitter.zPosition=2.0;
+    return emitter;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -68,12 +83,15 @@
     power /= [aplayer.player numberOfChannels];
     
     float level = meterTable.ValueAt(power);
-    scale = level * 5;
+    scale = level * 2;
     
     NSLog(@"Power: %f, Level: %f, Scale: %f", power, level, scale);
 
-    
-    //[emitterLayer setValue:@(scale) forKeyPath:@"emitterCells.cell.scale"];
+    for (int i = 0; i < [self->emitterArray count]; ++i){
+        SKEmitterNode *emitterNode = self->emitterArray[i];
+        emitterNode.particleScale = scale;
+        emitterNode.particleBirthRate = self->birthRate;
+    }
 }
 
 @end
