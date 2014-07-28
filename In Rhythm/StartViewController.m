@@ -29,10 +29,10 @@
     
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle:@"SoundCloud Search"
-                          message:@"Enter Search Term"
+                          message:@"Enter Artist or Track"
                           delegate:self
-                          cancelButtonTitle:@"Cancel"
-                          otherButtonTitles:@"OK", nil];
+                          cancelButtonTitle:@"Search"
+                          otherButtonTitles:nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alert show];
 }

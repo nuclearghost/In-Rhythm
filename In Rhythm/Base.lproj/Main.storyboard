@@ -66,6 +66,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xjh-Y1-lsQ"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,19 +84,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-dg-31s">
-                                <rect key="frame" x="141" y="231" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginBtnTapped:" destination="QmQ-BF-dW3" eventType="touchUpInside" id="SZw-GS-Z3z"/>
-                                    <action selector="searchBtnTapped:" destination="QmQ-BF-dW3" eventType="touchUpInside" id="1RE-UA-FCs"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKw-bH-3uy">
-                                <rect key="frame" x="136" y="307" width="48" height="30"/>
+                                <rect key="frame" x="136" y="269" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,16 +94,30 @@
                                     <action selector="searchBtnTapped:" destination="QmQ-BF-dW3" eventType="touchUpInside" id="nA2-35-7Gz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In Rhythm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5e-ke-o5r">
+                                <rect key="frame" x="88" y="135" width="144" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="powered_by_large_black.png" translatesAutoresizingMaskIntoConstraints="NO" id="tHx-Ry-L02">
+                                <rect key="frame" x="115" y="475" width="90" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qaa-dg-31s" firstAttribute="top" secondItem="SER-CO-33q" secondAttribute="bottom" constant="187" id="Gy0-yx-BS6"/>
-                            <constraint firstItem="Qaa-dg-31s" firstAttribute="centerX" secondItem="zKw-bH-3uy" secondAttribute="centerX" id="OHX-Xc-Tqn"/>
-                            <constraint firstItem="zKw-bH-3uy" firstAttribute="top" secondItem="Qaa-dg-31s" secondAttribute="bottom" constant="46" id="RtA-Yn-Nta"/>
-                            <constraint firstAttribute="centerX" secondItem="Qaa-dg-31s" secondAttribute="centerX" id="vvL-Z2-UjM"/>
+                            <constraint firstAttribute="centerX" secondItem="zKw-bH-3uy" secondAttribute="centerX" id="S0Q-gt-81R"/>
+                            <constraint firstAttribute="centerY" secondItem="zKw-bH-3uy" secondAttribute="centerY" id="n63-a5-Nm0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="L9W-TV-TVF"/>
+                    <navigationItem key="navigationItem" id="L9W-TV-TVF">
+                        <barButtonItem key="leftBarButtonItem" title="Login" id="JcY-iU-7X7">
+                            <connections>
+                                <action selector="loginBtnTapped:" destination="QmQ-BF-dW3" id="tw5-U5-YWc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Rbi-7z-FOI" kind="push" identifier="listSegue" id="eCZ-yS-vxy"/>
                     </connections>
@@ -126,6 +130,7 @@
         <scene sceneID="XXC-pr-0Ux">
             <objects>
                 <navigationController definesPresentationContext="YES" id="hND-aw-BU5" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0fX-cU-xi6">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -138,6 +143,9 @@
             <point key="canvasLocation" x="-747" y="74"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="powered_by_large_black.png" width="64" height="64"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

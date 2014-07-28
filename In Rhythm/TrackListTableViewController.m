@@ -10,13 +10,6 @@
 
 @implementation TrackListTableViewController
 
-/*
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
- */
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -67,13 +60,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                  aplayer.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
                  [aplayer.player prepareToPlay];
                  [aplayer.player setMeteringEnabled:YES];
-                 //[aplayer.player play];
-                 //NSLog(@"%@", [self.player.settings allKeys]);
-                 NSLog(@"Channel Layout: %@", [aplayer.player.settings objectForKey:AVChannelLayoutKey]);
-                 NSLog(@"Bit rate: %@", [aplayer.player.settings objectForKey:AVEncoderBitRateKey]);
-                 NSLog(@"Format: %@", [aplayer.player.settings objectForKey:AVFormatIDKey]);
-                 NSLog(@"Sample Rate: %@", [aplayer.player.settings objectForKey:AVSampleRateKey]);
-                 
                  [self performSegueWithIdentifier:@"playSegue" sender:nil];
              }];
 }

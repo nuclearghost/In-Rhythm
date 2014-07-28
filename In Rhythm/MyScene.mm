@@ -49,7 +49,17 @@
             CGPoint location = [touch locationInNode:self];
             [self addEmitter:location];
         }
+        
+        [self.vc.navigationController setNavigationBarHidden:YES animated:YES];
+        
+        [self enumerateChildNodesWithName:@"tap" usingBlock: ^(SKNode *node, BOOL *stop)
+         {
+             [node removeFromParent];
+         }];
+    } else {
+        [self.vc.navigationController setNavigationBarHidden:!self.vc.navigationController.navigationBarHidden animated:YES];
     }
+    
 }
 
 - (void) addEmitter:(CGPoint)location {
@@ -105,17 +115,25 @@
 - (void) createLabels:(NSDictionary *)track {
     SKLabelNode *titleLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     titleLabel.text = [track objectForKey:@"title"];
-    titleLabel.fontSize = 30;
+    titleLabel.fontSize = 20;
     titleLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                       CGRectGetMidY(self.frame));
     [self addChild:titleLabel];
     
     SKLabelNode *artistLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     artistLabel.text = [[track objectForKey:@"user"] objectForKey:@"username"];
-    artistLabel.fontSize = 20;
+    artistLabel.fontSize = 18;
     artistLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame) + 30);
+                                       CGRectGetMidY(self.frame) - 30);
     [self addChild:artistLabel];
+    
+    SKLabelNode *tapLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+    tapLabel.text = @"Tap to Play";
+    tapLabel.name = @"tap";
+    tapLabel.fontSize=20;
+    tapLabel.position = CGPointMake(CGRectGetMidX(self.frame),
+                                    CGRectGetMidY(self.frame) - 120);
+    [self addChild:tapLabel];
 }
 
 @end

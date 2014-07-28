@@ -15,6 +15,7 @@
 		F35222971985E47A001A1C3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35222961985E47A001A1C3F /* AVFoundation.framework */; };
 		F35222A21985EEE8001A1C3F /* SparkParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F35222A01985EEE8001A1C3F /* SparkParticle.sks */; };
 		F35222A31985EEE8001A1C3F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F35222A11985EEE8001A1C3F /* spark.png */; };
+		F35222A51986150B001A1C3F /* powered_by_large_black.png in Resources */ = {isa = PBXBuildFile; fileRef = F35222A41986150B001A1C3F /* powered_by_large_black.png */; };
 		F369F3A4198473B0001FFFC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A3198473B0001FFFC5 /* Foundation.framework */; };
 		F369F3A6198473B0001FFFC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A5198473B0001FFFC5 /* CoreGraphics.framework */; };
 		F369F3A8198473B0001FFFC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A7198473B0001FFFC5 /* UIKit.framework */; };
@@ -64,6 +65,7 @@
 		F35222961985E47A001A1C3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F35222A01985EEE8001A1C3F /* SparkParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkParticle.sks; sourceTree = "<group>"; };
 		F35222A11985EEE8001A1C3F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		F35222A41986150B001A1C3F /* powered_by_large_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powered_by_large_black.png; sourceTree = "<group>"; };
 		F369F3A0198473B0001FFFC5 /* In Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "In Rhythm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F369F3A3198473B0001FFFC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F369F3A5198473B0001FFFC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -204,6 +206,7 @@
 		F369F3AC198473B0001FFFC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F35222A41986150B001A1C3F /* powered_by_large_black.png */,
 				F369F3AD198473B0001FFFC5 /* In Rhythm-Info.plist */,
 				F369F3AE198473B0001FFFC5 /* InfoPlist.strings */,
 				F369F3B1198473B0001FFFC5 /* main.m */,
@@ -312,6 +315,7 @@
 			files = (
 				F369F3B0198473B0001FFFC5 /* InfoPlist.strings in Resources */,
 				F35222A31985EEE8001A1C3F /* spark.png in Resources */,
+				F35222A51986150B001A1C3F /* powered_by_large_black.png in Resources */,
 				F369F3C3198473B0001FFFC5 /* Images.xcassets in Resources */,
 				F369F3C1198473B0001FFFC5 /* Spaceship.png in Resources */,
 				F369F3B9198473B0001FFFC5 /* Main.storyboard in Resources */,

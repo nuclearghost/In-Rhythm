@@ -12,4 +12,6 @@
 
 @interface MyScene : SKScene
 
+@property (weak, nonatomic) UIViewController *vc;
+
 @end
