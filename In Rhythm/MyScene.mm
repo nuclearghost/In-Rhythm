@@ -121,7 +121,7 @@
         
         //NSLog(@"Power: %f, Level: %f, Scale: %f, Mean:%f, StdDev: %f", power, level, scale, mean, stddev);
         
-        if (self->samples > 300 && scale - mean >  stddev) {
+        if (self->samples > 300 && scale - mean > 1.5 * stddev) {
             [self addEmitter:CGPointMake( (CGFloat)(arc4random() % (int)self.scene.size.width), (CGFloat)(arc4random() % (int)self.scene.size.height))];
         }
     }
