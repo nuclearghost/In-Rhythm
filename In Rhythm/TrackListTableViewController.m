@@ -59,14 +59,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
       sendingProgressHandler:nil
              responseHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                  NSError *playerError;
-                 self.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
-                 [self.player prepareToPlay];
-                 [self.player play];
+                 AudioPlayer *aplayer = [AudioPlayer sharedInstance];
+                 
+                 aplayer.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
+                 [aplayer.player prepareToPlay];
+                 [aplayer.player play];
                  //NSLog(@"%@", [self.player.settings allKeys]);
-                 NSLog(@"Channel Layout: %@", [self.player.settings objectForKey:AVChannelLayoutKey]);
-                 NSLog(@"Bit rate: %@", [self.player.settings objectForKey:AVEncoderBitRateKey]);
-                 NSLog(@"Format: %@", [self.player.settings objectForKey:AVFormatIDKey]);
-                 NSLog(@"Sample Rate: %@", [self.player.settings objectForKey:AVSampleRateKey]);
+                 NSLog(@"Channel Layout: %@", [aplayer.player.settings objectForKey:AVChannelLayoutKey]);
+                 NSLog(@"Bit rate: %@", [aplayer.player.settings objectForKey:AVEncoderBitRateKey]);
+                 NSLog(@"Format: %@", [aplayer.player.settings objectForKey:AVFormatIDKey]);
+                 NSLog(@"Sample Rate: %@", [aplayer.player.settings objectForKey:AVSampleRateKey]);
              }];
 }
 @end

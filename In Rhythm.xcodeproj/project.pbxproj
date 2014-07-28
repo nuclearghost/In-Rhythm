@@ -10,6 +10,7 @@
 		8BF6C4EF0CDE42AB9D903DFB /* libPods-In Rhythm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 333575744D3944C09E8FA031 /* libPods-In Rhythm.a */; };
 		F352228819847CB6001A1C3F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F352228719847CB6001A1C3F /* StartViewController.m */; };
 		F352228B1984A6C8001A1C3F /* TrackListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F352228A1984A6C8001A1C3F /* TrackListTableViewController.m */; };
+		F35222911985DAAC001A1C3F /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F35222901985D950001A1C3F /* AudioPlayer.m */; };
 		F369F3A4198473B0001FFFC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A3198473B0001FFFC5 /* Foundation.framework */; };
 		F369F3A6198473B0001FFFC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A5198473B0001FFFC5 /* CoreGraphics.framework */; };
 		F369F3A8198473B0001FFFC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A7198473B0001FFFC5 /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 		F352228719847CB6001A1C3F /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		F35222891984A6C8001A1C3F /* TrackListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackListTableViewController.h; sourceTree = "<group>"; };
 		F352228A1984A6C8001A1C3F /* TrackListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackListTableViewController.m; sourceTree = "<group>"; };
+		F352228F1985D950001A1C3F /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
+		F35222901985D950001A1C3F /* AudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		F369F3A0198473B0001FFFC5 /* In Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "In Rhythm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F369F3A3198473B0001FFFC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F369F3A5198473B0001FFFC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +172,8 @@
 				F369F3BD198473B0001FFFC5 /* MyScene.h */,
 				F369F3BE198473B0001FFFC5 /* MyScene.m */,
 				F369F3C0198473B0001FFFC5 /* Spaceship.png */,
+				F352228F1985D950001A1C3F /* AudioPlayer.h */,
+				F35222901985D950001A1C3F /* AudioPlayer.m */,
 				F369F3C2198473B0001FFFC5 /* Images.xcassets */,
 				F369F3AC198473B0001FFFC5 /* Supporting Files */,
 			);
@@ -337,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35222911985DAAC001A1C3F /* AudioPlayer.m in Sources */,
 				F369F3BF198473B0001FFFC5 /* MyScene.m in Sources */,
 				F369F3BC198473B0001FFFC5 /* ViewController.m in Sources */,
 				F352228819847CB6001A1C3F /* StartViewController.m in Sources */,

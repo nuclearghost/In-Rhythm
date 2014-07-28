@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@import AVFoundation;
 
 #import "SCUI.h"
+#import "AudioPlayer.h"
 
 @interface TrackListTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *tracks;
-@property (nonatomic, strong) AVAudioPlayer *player;
 
 @end
