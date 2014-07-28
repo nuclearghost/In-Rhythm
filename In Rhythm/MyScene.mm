@@ -20,10 +20,9 @@
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
         AudioPlayer *aplayer = [AudioPlayer sharedInstance];
-        
+
+        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         myLabel.text = [aplayer.track objectForKey:@"title"];
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
@@ -56,7 +55,7 @@
         [self addChild: newEmitter];
         [self->emitterArray insertObject:newEmitter atIndex:self->emitterInsertPos];
         self->emitterInsertPos = (self->emitterInsertPos + 1) % 5;
-        self->birthRate = self->birthRate / [self->emitterArray count];
+        //self->birthRate = 100 / [self->emitterArray count];
     }
 }
 
@@ -85,13 +84,16 @@
     float level = meterTable.ValueAt(power);
     scale = level * 2;
     
-    NSLog(@"Power: %f, Level: %f, Scale: %f", power, level, scale);
+    
+    NSLog(@"Power: %f, Level: %f, Scale: %f, Birth Rate: %d", power, level, scale, self->birthRate);
 
+    
     for (int i = 0; i < [self->emitterArray count]; ++i){
         SKEmitterNode *emitterNode = self->emitterArray[i];
         emitterNode.particleScale = scale;
-        emitterNode.particleBirthRate = self->birthRate;
+        emitterNode.particleBirthRate = self->birthRate * scale;
     }
+     
 }
 
 @end
