@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Mark Meyer. All rights reserved.
 //
 
-@import AVFoundation;
+#import <AVFoundation/AVFoundation.h>
 
 @interface AudioPlayer : NSObject
 

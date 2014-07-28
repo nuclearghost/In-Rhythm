@@ -7,8 +7,11 @@
 //
 
 #import "MyScene.h"
+#import "MeterTable.h"
 
-@implementation MyScene
+@implementation MyScene {
+    MeterTable meterTable;
+}
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -56,17 +59,19 @@
     AudioPlayer *aplayer = [AudioPlayer sharedInstance];
     [aplayer.player updateMeters];
     
-    //float scale = 0.5;
+    float scale = 0.5;
     
     float power = 0.0f;
     for (int i = 0; i < [aplayer.player numberOfChannels]; i++) {
         power += [aplayer.player averagePowerForChannel:i];
     }
     power /= [aplayer.player numberOfChannels];
-    NSLog(@"Power: %f", power);
     
-    //float level = meterTable.ValueAt(power);
-    //scale = level * 5;
+    float level = meterTable.ValueAt(power);
+    scale = level * 5;
+    
+    NSLog(@"Power: %f, Level: %f, Scale: %f", power, level, scale);
+
     
     //[emitterLayer setValue:@(scale) forKeyPath:@"emitterCells.cell.scale"];
 }

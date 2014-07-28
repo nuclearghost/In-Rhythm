@@ -11,6 +11,8 @@
 		F352228819847CB6001A1C3F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F352228719847CB6001A1C3F /* StartViewController.m */; };
 		F352228B1984A6C8001A1C3F /* TrackListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F352228A1984A6C8001A1C3F /* TrackListTableViewController.m */; };
 		F35222911985DAAC001A1C3F /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F35222901985D950001A1C3F /* AudioPlayer.m */; };
+		F35222941985E3B1001A1C3F /* MeterTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F35222921985E3B1001A1C3F /* MeterTable.cpp */; };
+		F35222971985E47A001A1C3F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F35222961985E47A001A1C3F /* AVFoundation.framework */; };
 		F369F3A4198473B0001FFFC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A3198473B0001FFFC5 /* Foundation.framework */; };
 		F369F3A6198473B0001FFFC5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A5198473B0001FFFC5 /* CoreGraphics.framework */; };
 		F369F3A8198473B0001FFFC5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3A7198473B0001FFFC5 /* UIKit.framework */; };
@@ -20,7 +22,7 @@
 		F369F3B6198473B0001FFFC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F369F3B5198473B0001FFFC5 /* AppDelegate.m */; };
 		F369F3B9198473B0001FFFC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F369F3B7198473B0001FFFC5 /* Main.storyboard */; };
 		F369F3BC198473B0001FFFC5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F369F3BB198473B0001FFFC5 /* ViewController.m */; };
-		F369F3BF198473B0001FFFC5 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F369F3BE198473B0001FFFC5 /* MyScene.m */; };
+		F369F3BF198473B0001FFFC5 /* MyScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = F369F3BE198473B0001FFFC5 /* MyScene.mm */; };
 		F369F3C1198473B0001FFFC5 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = F369F3C0198473B0001FFFC5 /* Spaceship.png */; };
 		F369F3C3198473B0001FFFC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F369F3C2198473B0001FFFC5 /* Images.xcassets */; };
 		F369F3CA198473B0001FFFC5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F369F3C9198473B0001FFFC5 /* XCTest.framework */; };
@@ -55,6 +57,9 @@
 		F352228A1984A6C8001A1C3F /* TrackListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackListTableViewController.m; sourceTree = "<group>"; };
 		F352228F1985D950001A1C3F /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 		F35222901985D950001A1C3F /* AudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		F35222921985E3B1001A1C3F /* MeterTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeterTable.cpp; sourceTree = "<group>"; };
+		F35222931985E3B1001A1C3F /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
+		F35222961985E47A001A1C3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F369F3A0198473B0001FFFC5 /* In Rhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "In Rhythm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F369F3A3198473B0001FFFC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F369F3A5198473B0001FFFC5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,7 +75,7 @@
 		F369F3BA198473B0001FFFC5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F369F3BB198473B0001FFFC5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F369F3BD198473B0001FFFC5 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		F369F3BE198473B0001FFFC5 /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		F369F3BE198473B0001FFFC5 /* MyScene.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MyScene.mm; sourceTree = "<group>"; };
 		F369F3C0198473B0001FFFC5 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		F369F3C2198473B0001FFFC5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F369F3C8198473B0001FFFC5 /* In RhythmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "In RhythmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F35222971985E47A001A1C3F /* AVFoundation.framework in Frameworks */,
 				F369F3F61984757D001FFFC5 /* Security.framework in Frameworks */,
 				F369F3F419847578001FFFC5 /* QuartzCore.framework in Frameworks */,
 				F369F3F21984756F001FFFC5 /* CoreText.framework in Frameworks */,
@@ -118,6 +124,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F35222951985E3B8001A1C3F /* MeterTable */ = {
+			isa = PBXGroup;
+			children = (
+				F35222921985E3B1001A1C3F /* MeterTable.cpp */,
+				F35222931985E3B1001A1C3F /* MeterTable.h */,
+			);
+			name = MeterTable;
+			sourceTree = "<group>";
+		};
 		F369F397198473B0001FFFC5 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +156,7 @@
 		F369F3A2198473B0001FFFC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F35222961985E47A001A1C3F /* AVFoundation.framework */,
 				F369F3F51984757D001FFFC5 /* Security.framework */,
 				F369F3F319847578001FFFC5 /* QuartzCore.framework */,
 				F369F3F11984756F001FFFC5 /* CoreText.framework */,
@@ -170,11 +186,12 @@
 				F369F3BA198473B0001FFFC5 /* ViewController.h */,
 				F369F3BB198473B0001FFFC5 /* ViewController.m */,
 				F369F3BD198473B0001FFFC5 /* MyScene.h */,
-				F369F3BE198473B0001FFFC5 /* MyScene.m */,
+				F369F3BE198473B0001FFFC5 /* MyScene.mm */,
 				F369F3C0198473B0001FFFC5 /* Spaceship.png */,
 				F352228F1985D950001A1C3F /* AudioPlayer.h */,
 				F35222901985D950001A1C3F /* AudioPlayer.m */,
 				F369F3C2198473B0001FFFC5 /* Images.xcassets */,
+				F35222951985E3B8001A1C3F /* MeterTable */,
 				F369F3AC198473B0001FFFC5 /* Supporting Files */,
 			);
 			path = "In Rhythm";
@@ -343,9 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F35222911985DAAC001A1C3F /* AudioPlayer.m in Sources */,
-				F369F3BF198473B0001FFFC5 /* MyScene.m in Sources */,
+				F369F3BF198473B0001FFFC5 /* MyScene.mm in Sources */,
 				F369F3BC198473B0001FFFC5 /* ViewController.m in Sources */,
 				F352228819847CB6001A1C3F /* StartViewController.m in Sources */,
+				F35222941985E3B1001A1C3F /* MeterTable.cpp in Sources */,
 				F352228B1984A6C8001A1C3F /* TrackListTableViewController.m in Sources */,
 				F369F3B6198473B0001FFFC5 /* AppDelegate.m in Sources */,
 				F369F3B2198473B0001FFFC5 /* main.m in Sources */,
