@@ -40,7 +40,7 @@
         }
     };
     
-    NSString *resourceURL = @"https://api.soundcloud.com/tracks.json?filter=streamable&order=hottest";
+    NSString *resourceURL = @"https://api.soundcloud.com/tracks.json?q=krewella&filter=streamable&order=hotness";
     //@"https://api.soundcloud.com/me/tracks.json";
     [SCRequest performMethod:SCRequestMethodGET
                   onResource:[NSURL URLWithString:resourceURL]

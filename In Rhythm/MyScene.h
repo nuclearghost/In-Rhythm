@@ -8,6 +8,8 @@
 
 #import <SpriteKit/SpriteKit.h>
 
+#import "AudioPlayer.h"
+
 @interface MyScene : SKScene
 
 @end

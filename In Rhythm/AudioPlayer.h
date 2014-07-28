@@ -17,6 +17,6 @@
 + (AudioPlayer*)sharedInstance;
 
 @property (nonatomic, strong) AVAudioPlayer *player;
-
+@property (nonatomic, strong) NSDictionary *track;
 
 @end

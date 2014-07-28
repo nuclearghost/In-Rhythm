@@ -48,6 +48,9 @@
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary *track = [self.tracks objectAtIndex:indexPath.row];
+    AudioPlayer *aplayer = [AudioPlayer sharedInstance];
+    aplayer.track = [[NSDictionary alloc] initWithDictionary:track];
+    
     NSString *streamURL = [track objectForKey:@"stream_url"];
     
     SCAccount *account = [SCSoundCloud account];
@@ -63,12 +66,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                  
                  aplayer.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
                  [aplayer.player prepareToPlay];
-                 [aplayer.player play];
+                 //[aplayer.player play];
                  //NSLog(@"%@", [self.player.settings allKeys]);
                  NSLog(@"Channel Layout: %@", [aplayer.player.settings objectForKey:AVChannelLayoutKey]);
                  NSLog(@"Bit rate: %@", [aplayer.player.settings objectForKey:AVEncoderBitRateKey]);
                  NSLog(@"Format: %@", [aplayer.player.settings objectForKey:AVFormatIDKey]);
                  NSLog(@"Sample Rate: %@", [aplayer.player.settings objectForKey:AVSampleRateKey]);
+                 
+                 [self performSegueWithIdentifier:@"playSegue" sender:nil];
              }];
 }
 @end
