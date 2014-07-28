@@ -15,6 +15,9 @@
     int birthRate;
     int emitterInsertPos;
     int maxEmitters;
+    double samples;
+    double x1;
+    double x2;
 }
 
 -(id)initWithSize:(CGSize)size {
@@ -29,6 +32,10 @@
         self->emitterInsertPos = 0;
         self->maxEmitters = 5;
         self->emitterArray = [[NSMutableArray alloc] initWithCapacity:self->maxEmitters];
+        
+        self->samples = 0;
+        self->x1 = 0;
+        self->x2 = 0;
     }
     return self;
 }
@@ -98,15 +105,23 @@
         float level = meterTable.ValueAt(power);
         scale = level * 2;
         
-        NSLog(@"Power: %f, Level: %f, Scale: %f, Birth Rate: %d", power, level, scale, self->birthRate);
-        
         for (int i = 0; i < [self->emitterArray count]; ++i){
             SKEmitterNode *emitterNode = self->emitterArray[i];
             emitterNode.particleScale = scale;
             emitterNode.particleBirthRate = self->birthRate * scale;
         }
         
-        if (scale > 1.9) {
+        self->samples++;
+        self->x1 += scale;
+        self->x2 += pow(scale, 2);
+        
+        double mean = self->x1/self->samples;
+        
+        double stddev = sqrt((self->x2/self->samples) - pow(mean, 2));
+        
+        //NSLog(@"Power: %f, Level: %f, Scale: %f, Mean:%f, StdDev: %f", power, level, scale, mean, stddev);
+        
+        if (self->samples > 300 && scale - mean > stddev) {
             [self addEmitter:CGPointMake( (CGFloat)(arc4random() % (int)self.scene.size.width), (CGFloat)(arc4random() % (int)self.scene.size.height))];
         }
     }
