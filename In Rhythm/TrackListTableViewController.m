@@ -66,6 +66,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                  
                  aplayer.player = [[AVAudioPlayer alloc] initWithData:data error:&playerError];
                  [aplayer.player prepareToPlay];
+                 [aplayer.player setMeteringEnabled:YES];
                  //[aplayer.player play];
                  //NSLog(@"%@", [self.player.settings allKeys]);
                  NSLog(@"Channel Layout: %@", [aplayer.player.settings objectForKey:AVChannelLayoutKey]);
